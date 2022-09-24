@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class EstruturaObservacionais {
@@ -15,6 +16,9 @@ public class EstruturaObservacionais {
 	private Double potenciaEletrica;
 	private String geracaoDeEnergia;
 	private String comprimentoDeOndas;
+	
+	@ManyToOne
+	private TelescopeSpace telescopeSpace;
 	
 	public EstruturaObservacionais() {
 		// TODO Auto-generated constructor stub
@@ -59,6 +63,19 @@ public class EstruturaObservacionais {
 	public void setComprimentoDeOndas(String comprimentoDeOndas) {
 		this.comprimentoDeOndas = comprimentoDeOndas;
 	}
+
+	public TelescopeSpace getTelescopeSpace() {
+		return telescopeSpace;
+	}
+
+	public void setTelescopeSpace(TelescopeSpace telescopeSpace) {
+		this.telescopeSpace = telescopeSpace;
+	}
+
+	public void setPotenciaEletrica(Double potenciaEletrica) {
+		this.potenciaEletrica = potenciaEletrica;
+	}
+	
 	
 	
 }

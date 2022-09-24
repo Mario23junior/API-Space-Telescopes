@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class EspecificacaoOrbital {
@@ -16,6 +17,9 @@ public class EspecificacaoOrbital {
 	private String referenciaOrbital;
 	private String periodoOrbital;
 	private Double inclinacaoOrbital;
+	
+	@ManyToOne
+	private TelescopeSpace telescopeSpace;
 
 	public EspecificacaoOrbital() {
 		// TODO Auto-generated constructor stub
@@ -69,4 +73,12 @@ public class EspecificacaoOrbital {
 		this.inclinacaoOrbital = inclinacaoOrbital;
 	}
 
+	public TelescopeSpace getTelescopeSpace() {
+		return telescopeSpace;
+	}
+
+	public void setTelescopeSpace(TelescopeSpace telescopeSpace) {
+		this.telescopeSpace = telescopeSpace;
+	}
+	
 }

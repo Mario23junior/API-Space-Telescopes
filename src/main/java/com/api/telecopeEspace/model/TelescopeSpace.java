@@ -1,10 +1,14 @@
 package com.api.telecopeEspace.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class TelescopeSpace {
@@ -20,6 +24,15 @@ public class TelescopeSpace {
 	private String durationMissao;
 	private String dataDelancamento;
 	private String status;
+	
+	@OneToMany(mappedBy = "telescopeSpace",cascade = CascadeType.ALL)
+	private List<EspecificacaoOrbital> especificacaoOrbital;
+	
+	@OneToMany(mappedBy = "telescopeSpace",cascade = CascadeType.ALL)
+	private List<EstruturaObservacionais> estruturaObservacionais;
+	
+	@OneToMany(mappedBy = "telescopeSpace",cascade = CascadeType.ALL)
+	private List<PropriedadeEstruturais> propriedadeEstruturais;
 	
 	public TelescopeSpace() {
 		// TODO Auto-generated constructor stub
@@ -88,6 +101,32 @@ public class TelescopeSpace {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
+	public List<EspecificacaoOrbital> getEspecificacaoOrbital() {
+		return especificacaoOrbital;
+	}
+
+	public void setEspecificacaoOrbital(List<EspecificacaoOrbital> especificacaoOrbital) {
+		this.especificacaoOrbital = especificacaoOrbital;
+	}
+
+	public List<EstruturaObservacionais> getEstruturaObservacionais() {
+		return estruturaObservacionais;
+	}
+
+	public void setEstruturaObservacionais(List<EstruturaObservacionais> estruturaObservacionais) {
+		this.estruturaObservacionais = estruturaObservacionais;
+	}
+
+	public List<PropriedadeEstruturais> getPropriedadeEstruturais() {
+		return propriedadeEstruturais;
+	}
+
+	public void setPropriedadeEstruturais(List<PropriedadeEstruturais> propriedadeEstruturais) {
+		this.propriedadeEstruturais = propriedadeEstruturais;
+	}
+	
+	
 	
 	
 	

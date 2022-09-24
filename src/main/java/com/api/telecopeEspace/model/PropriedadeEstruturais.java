@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class PropriedadeEstruturais {
@@ -16,6 +17,9 @@ public class PropriedadeEstruturais {
 	private double periastro;
 	private double apoastro;
 	private double distanciaFocal;
+	
+	@ManyToOne
+	private TelescopeSpace telescopeSpace;
 
 	public PropriedadeEstruturais() {
 		// TODO Auto-generated constructor stub
@@ -68,5 +72,15 @@ public class PropriedadeEstruturais {
 	public void setDistanciaFocal(double distanciaFocal) {
 		this.distanciaFocal = distanciaFocal;
 	}
+
+	public TelescopeSpace getTelescopeSpace() {
+		return telescopeSpace;
+	}
+
+	public void setTelescopeSpace(TelescopeSpace telescopeSpace) {
+		this.telescopeSpace = telescopeSpace;
+	}
+	
+	
 
 }
