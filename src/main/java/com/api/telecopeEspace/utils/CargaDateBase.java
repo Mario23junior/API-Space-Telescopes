@@ -6,12 +6,12 @@ import org.springframework.stereotype.Service;
 import com.api.telecopeEspace.repository.TelescopeSpaceRepository;
 
 @Service
-public class cargaDateBase {
+public class CargaDateBase {
    
 	private TelescopeSpaceRepository repository;
 	private ModelMapper mapper;
 	
-	public cargaDateBase(TelescopeSpaceRepository repository, ModelMapper mapper) {
+	public CargaDateBase(TelescopeSpaceRepository repository, ModelMapper mapper) {
 		super();
 		this.repository = repository;
 		this.mapper = mapper;
