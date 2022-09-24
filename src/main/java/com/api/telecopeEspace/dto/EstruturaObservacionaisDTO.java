@@ -9,6 +9,9 @@ public class EstruturaObservacionaisDTO {
 	private String geracaoDeEnergia;
 	private String comprimentoDeOndas;
 	
+	private TelescopeSpaceDTO telescopeSpaceDto;
+
+	
 	public EstruturaObservacionaisDTO() {
 		// TODO Auto-generated constructor stub
 	}
@@ -52,6 +55,20 @@ public class EstruturaObservacionaisDTO {
 	public void setComprimentoDeOndas(String comprimentoDeOndas) {
 		this.comprimentoDeOndas = comprimentoDeOndas;
 	}
+
+	public TelescopeSpaceDTO getTelescopeSpaceDto() {
+		return telescopeSpaceDto;
+	}
+
+	public void setTelescopeSpaceDto(TelescopeSpaceDTO telescopeSpaceDto) {
+		this.telescopeSpaceDto = telescopeSpaceDto;
+	}
+
+	public void setPotenciaEletrica(Double potenciaEletrica) {
+		this.potenciaEletrica = potenciaEletrica;
+	}
+	
+	
 	
 	
 }

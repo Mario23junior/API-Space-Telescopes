@@ -1,5 +1,7 @@
 package com.api.telecopeEspace.dto;
 
+import java.util.List;
+
 public class TelescopeSpaceDTO {
 
 	private Long id;
@@ -10,6 +12,10 @@ public class TelescopeSpaceDTO {
 	private String durationMissao;
 	private String dataDelancamento;
 	private String status;
+	
+ 	private List<EspecificacaoOrbitalDTO> especificacaoOrbitalDto;
+ 	private List<EstruturaObservacionaisDTO> estruturaObservacionaisDto;
+ 	private List<PropriedadeEstruturaisDTO> propriedadeEstruturaisDto;
 
 	public TelescopeSpaceDTO() {
 		// TODO Auto-generated constructor stub
@@ -78,5 +84,31 @@ public class TelescopeSpaceDTO {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
+	public List<EspecificacaoOrbitalDTO> getEspecificacaoOrbitalDto() {
+		return especificacaoOrbitalDto;
+	}
+
+	public void setEspecificacaoOrbitalDto(List<EspecificacaoOrbitalDTO> especificacaoOrbitalDto) {
+		this.especificacaoOrbitalDto = especificacaoOrbitalDto;
+	}
+
+	public List<EstruturaObservacionaisDTO> getEstruturaObservacionaisDto() {
+		return estruturaObservacionaisDto;
+	}
+
+	public void setEstruturaObservacionaisDto(List<EstruturaObservacionaisDTO> estruturaObservacionaisDto) {
+		this.estruturaObservacionaisDto = estruturaObservacionaisDto;
+	}
+
+	public List<PropriedadeEstruturaisDTO> getPropriedadeEstruturaisDto() {
+		return propriedadeEstruturaisDto;
+	}
+
+	public void setPropriedadeEstruturaisDto(List<PropriedadeEstruturaisDTO> propriedadeEstruturaisDto) {
+		this.propriedadeEstruturaisDto = propriedadeEstruturaisDto;
+	}
+	
+	
 
 }

@@ -8,6 +8,8 @@ public class EspecificacaoOrbitalDTO {
 	private String referenciaOrbital;
 	private String periodoOrbital;
 	private Double inclinacaoOrbital;
+	
+	private TelescopeSpaceDTO telescopeSpaceDto;
 
 	public EspecificacaoOrbitalDTO() {
 		// TODO Auto-generated constructor stub
@@ -60,5 +62,15 @@ public class EspecificacaoOrbitalDTO {
 	public void setInclinacaoOrbital(Double inclinacaoOrbital) {
 		this.inclinacaoOrbital = inclinacaoOrbital;
 	}
+
+	public TelescopeSpaceDTO getTelescopeSpaceDto() {
+		return telescopeSpaceDto;
+	}
+
+	public void setTelescopeSpaceDto(TelescopeSpaceDTO telescopeSpaceDto) {
+		this.telescopeSpaceDto = telescopeSpaceDto;
+	}
+	
+	
 
 }

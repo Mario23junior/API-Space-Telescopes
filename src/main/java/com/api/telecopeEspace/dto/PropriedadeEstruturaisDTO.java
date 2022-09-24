@@ -8,6 +8,8 @@ public class PropriedadeEstruturaisDTO {
 	private double periastro;
 	private double apoastro;
 	private double distanciaFocal;
+	
+	private TelescopeSpaceDTO telescopeSpaceDto;
 
 	public PropriedadeEstruturaisDTO() {
 		// TODO Auto-generated constructor stub
@@ -59,6 +61,14 @@ public class PropriedadeEstruturaisDTO {
 
 	public void setDistanciaFocal(double distanciaFocal) {
 		this.distanciaFocal = distanciaFocal;
+	}
+
+	public TelescopeSpaceDTO getTelescopeSpaceDto() {
+		return telescopeSpaceDto;
+	}
+
+	public void setTelescopeSpaceDto(TelescopeSpaceDTO telescopeSpaceDto) {
+		this.telescopeSpaceDto = telescopeSpaceDto;
 	}
 
 }
