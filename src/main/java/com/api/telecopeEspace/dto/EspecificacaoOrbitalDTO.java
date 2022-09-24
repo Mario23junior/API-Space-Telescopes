@@ -1,8 +1,5 @@
 package com.api.telecopeEspace.dto;
 
-import javax.persistence.Entity;
-
-@Entity
 public class EspecificacaoOrbitalDTO {
 
 	private Long id;
