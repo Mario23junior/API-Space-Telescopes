@@ -1,5 +1,7 @@
 package com.api.telecopeEspace.service;
 
+import java.util.Optional;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,5 +31,14 @@ public class TelescopeSpaceService {
 
 	public TelescopeSpace bodysave(TelescopeSpace telescopeSpace) {
 		return this.teleRespository.save(telescopeSpace);
+	}
+	
+	public ResponseEntity<TelescopeSpaceDTO> listId(Long id){
+		Optional<TelescopeSpace> listid = teleRespository.findById(id);
+		 if(listid.isPresent()) {
+			 return ResponseEntity.ok(mapper.map(listid.get(), TelescopeSpaceDTO.class));
+		 } else {
+			 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		 }
 	}
 }
