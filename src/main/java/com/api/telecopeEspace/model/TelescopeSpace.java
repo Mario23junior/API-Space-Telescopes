@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class TelescopeSpace {
     
@@ -105,6 +107,7 @@ public class TelescopeSpace {
 		this.status = status;
 	}
 
+	@JsonIgnore
 	public List<EspecificacaoOrbital> getEspecificacaoOrbital() {
 		return especificacaoOrbital;
 	}
@@ -113,6 +116,7 @@ public class TelescopeSpace {
 		this.especificacaoOrbital = especificacaoOrbital;
 	}
 
+	@JsonIgnore
 	public List<EstruturaObservacionais> getEstruturaObservacionais() {
 		return estruturaObservacionais;
 	}
@@ -120,7 +124,8 @@ public class TelescopeSpace {
 	public void setEstruturaObservacionais(List<EstruturaObservacionais> estruturaObservacionais) {
 		this.estruturaObservacionais = estruturaObservacionais;
 	}
-
+    
+	@JsonIgnore
 	public List<PropriedadeEstruturais> getPropriedadeEstruturais() {
 		return propriedadeEstruturais;
 	}
