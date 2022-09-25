@@ -9,9 +9,6 @@ import com.api.telecopeEspace.dto.EspecificacaoOrbitalDTO;
 import com.api.telecopeEspace.dto.EstruturaObservacionaisDTO;
 import com.api.telecopeEspace.dto.PropriedadeEstruturaisDTO;
 import com.api.telecopeEspace.dto.TelescopeSpaceDTO;
-import com.api.telecopeEspace.model.EspecificacaoOrbital;
-import com.api.telecopeEspace.model.EstruturaObservacionais;
-import com.api.telecopeEspace.model.PropriedadeEstruturais;
 import com.api.telecopeEspace.model.TelescopeSpace;
 import com.api.telecopeEspace.repository.TelescopeSpaceRepository;
 
