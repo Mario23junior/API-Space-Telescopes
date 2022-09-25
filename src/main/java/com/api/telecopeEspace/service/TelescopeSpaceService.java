@@ -59,4 +59,16 @@ public class TelescopeSpaceService {
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}
 	}
+	
+	public ResponseEntity<TelescopeSpaceDTO> delete(Long id) {
+		Optional<TelescopeSpace> listid = teleRespository.findById(id);
+		 if(listid.isPresent()) {
+			 teleRespository.delete(listid.get());
+			 return ResponseEntity.ok(mapper.map(listid.get(), TelescopeSpaceDTO.class));
+		 } else {
+			 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		 }
+	}
+	
+	
 }
