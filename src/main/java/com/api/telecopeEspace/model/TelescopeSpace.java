@@ -33,10 +33,32 @@ public class TelescopeSpace {
 	
 	@OneToMany(mappedBy = "telescopeSpace",cascade = CascadeType.ALL)
 	private List<PropriedadeEstruturais> propriedadeEstruturais;
-	
+ 
 	public TelescopeSpace() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+
+	public TelescopeSpace(Long id, String nome, String img, String tipo, String missao, String durationMissao,
+			String dataDelancamento, String status, List<EspecificacaoOrbital> especificacaoOrbital,
+			List<EstruturaObservacionais> estruturaObservacionais,
+			List<PropriedadeEstruturais> propriedadeEstruturais) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.img = img;
+		this.tipo = tipo;
+		this.missao = missao;
+		this.durationMissao = durationMissao;
+		this.dataDelancamento = dataDelancamento;
+		this.status = status;
+		this.especificacaoOrbital = especificacaoOrbital;
+		this.estruturaObservacionais = estruturaObservacionais;
+		this.propriedadeEstruturais = propriedadeEstruturais;
+	}
+
+
 
 	public Long getId() {
 		return id;
@@ -125,11 +147,4 @@ public class TelescopeSpace {
 	public void setPropriedadeEstruturais(List<PropriedadeEstruturais> propriedadeEstruturais) {
 		this.propriedadeEstruturais = propriedadeEstruturais;
 	}
-	
-	
-	
-	
-	
-	
-
 }
