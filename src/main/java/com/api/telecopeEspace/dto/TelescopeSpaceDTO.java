@@ -20,28 +20,6 @@ public class TelescopeSpaceDTO {
 	public TelescopeSpaceDTO() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-
-	public TelescopeSpaceDTO(Long id, String nome, String img, String tipo, String missao, String durationMissao,
-			String dataDelancamento, String status, List<EspecificacaoOrbitalDTO> especificacaoOrbitalDto,
-			List<EstruturaObservacionaisDTO> estruturaObservacionaisDto,
-			List<PropriedadeEstruturaisDTO> propriedadeEstruturaisDto) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.img = img;
-		this.tipo = tipo;
-		this.missao = missao;
-		this.durationMissao = durationMissao;
-		this.dataDelancamento = dataDelancamento;
-		this.status = status;
-		this.especificacaoOrbitalDto = especificacaoOrbitalDto;
-		this.estruturaObservacionaisDto = estruturaObservacionaisDto;
-		this.propriedadeEstruturaisDto = propriedadeEstruturaisDto;
-	}
-
-
 
 	public Long getId() {
 		return id;
@@ -130,9 +108,5 @@ public class TelescopeSpaceDTO {
 	public void setPropriedadeEstruturaisDto(List<PropriedadeEstruturaisDTO> propriedadeEstruturaisDto) {
 		this.propriedadeEstruturaisDto = propriedadeEstruturaisDto;
 	}
-	
-	
-
- 
 
 }
