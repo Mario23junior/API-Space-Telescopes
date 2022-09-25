@@ -41,4 +41,22 @@ public class TelescopeSpaceService {
 			 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		 }
 	}
+	
+	public ResponseEntity<TelescopeSpaceDTO> updateTelescope(Long id, TelescopeSpaceDTO telescopeSpDto){
+		Optional<TelescopeSpace> datafind = teleRespository.findById(id);
+		if(datafind.isPresent()) {
+			TelescopeSpace t1 = datafind.get();
+			t1.setNome(telescopeSpDto.getNome());
+			t1.setImg(telescopeSpDto.getImg());
+			t1.setTipo(telescopeSpDto.getTipo());
+			t1.setMissao(telescopeSpDto.getMissao());
+			t1.setDurationMissao(telescopeSpDto.getDataDelancamento());
+			t1.setDataDelancamento(telescopeSpDto.getDataDelancamento());
+			t1.setStatus(telescopeSpDto.getStatus());
+			
+			return ResponseEntity.ok(mapper.map(t1, TelescopeSpaceDTO.class));
+		} else {
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+		}
+	}
 }
