@@ -1,5 +1,7 @@
 package com.api.telecopeEspace.controller;
 
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +30,11 @@ public class TelescopeSpaceController {
 		return service.saveTelescopeS(telescopeSpaceDTO);
 	}
 
+	@GetMapping
+	public List<TelescopeSpaceDTO> listAllTelescope() {
+		return service.listAllTelescope();
+	}
+	
 	@GetMapping("{id}")
 	public ResponseEntity<TelescopeSpaceDTO> listId(@PathVariable Long id) {
 		return service.listId(id);

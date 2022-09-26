@@ -1,6 +1,8 @@
 package com.api.telecopeEspace.service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
@@ -21,6 +23,15 @@ public class TelescopeSpaceService {
  		this.teleRespository = teleRespository;
 		this.mapper = mapper;
 	}
+	
+	public List<TelescopeSpaceDTO> listAllTelescope(){
+		List<TelescopeSpace> list = teleRespository.findAll();
+ 		return list
+				.stream()
+				.map(listall -> mapper.map(listall, TelescopeSpaceDTO.class))
+				.collect(Collectors.toList());
+  		
+ 	}
 
 	public ResponseEntity<TelescopeSpaceDTO> saveTelescopeS(TelescopeSpaceDTO teleDto) {
 		TelescopeSpace tele = bodysave(mapper.map(teleDto, TelescopeSpace.class));
