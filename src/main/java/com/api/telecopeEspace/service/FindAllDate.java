@@ -41,7 +41,9 @@ public class FindAllDate {
 	
 	public List<TelescopeSpaceDTO> listAllDto() {
 		List<TelescopeSpaceDTO> list = listAllDate();
-		return list.stream().collect(Collectors.toList());
+		return list
+				.stream()
+				.collect(Collectors.toList());
 	}
 	
 }

@@ -17,7 +17,7 @@ public class EspecificacaoOrbital {
 	private String referenciaOrbital;
 	private String periodoOrbital;
 	private Double inclinacaoOrbital;
-	
+
 	@ManyToOne
 	private TelescopeSpace telescopeSpace;
 
@@ -80,7 +80,5 @@ public class EspecificacaoOrbital {
 	public void setTelescopeSpace(TelescopeSpace telescopeSpace) {
 		this.telescopeSpace = telescopeSpace;
 	}
-	
-	
-	
+
 }
