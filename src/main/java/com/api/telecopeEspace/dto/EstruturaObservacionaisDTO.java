@@ -2,7 +2,6 @@ package com.api.telecopeEspace.dto;
 
 public class EstruturaObservacionaisDTO {
     
- 
 	private Long id;
 	private String massaDeLacamento;
 	private Double potenciaEletrica;
