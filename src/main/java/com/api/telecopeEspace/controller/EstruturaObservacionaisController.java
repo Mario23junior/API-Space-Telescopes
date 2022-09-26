@@ -1,5 +1,7 @@
 package com.api.telecopeEspace.controller;
 
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +23,11 @@ public class EstruturaObservacionaisController {
 	
 	public EstruturaObservacionaisController(EstruturaObservacionaisService service) {
 	  this.service = service;
+	}
+	
+	@GetMapping
+	public List<EstruturaObservacionaisDTO> listAllDate() {
+		return service.listAllDate();
 	}
 	
 	@PostMapping

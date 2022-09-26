@@ -1,6 +1,8 @@
 package com.api.telecopeEspace.service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
@@ -21,6 +23,15 @@ public class EstruturaObservacionaisService {
  		this.repository = repository;
 		this.mapper = mapper;
 	}
+	
+	public List<EstruturaObservacionaisDTO> listAllDate(){
+		List<EstruturaObservacionais> list = repository.findAll();
+ 		return list
+				.stream()
+				.map(listall -> mapper.map(listall, EstruturaObservacionaisDTO.class))
+				.collect(Collectors.toList());
+  		
+ 	}
 	
 	public ResponseEntity<EstruturaObservacionaisDTO> savestruturaObser (EstruturaObservacionaisDTO proEsturaObserDto) {
 		EstruturaObservacionais tele = bodysave(mapper.map(proEsturaObserDto, EstruturaObservacionais.class));

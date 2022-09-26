@@ -1,6 +1,8 @@
 package com.api.telecopeEspace.service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
@@ -21,6 +23,15 @@ public class PropriedadeEstruturaisService {
  		this.propriEstrReposi = propriEstrReposi;
 		this.mapper = mapper;
 	}
+	
+	public List<PropriedadeEstruturaisDTO> listAllDate(){
+		List<PropriedadeEstruturais> list = propriEstrReposi.findAll();
+ 		return list
+				.stream()
+				.map(listall -> mapper.map(listall, PropriedadeEstruturaisDTO.class))
+				.collect(Collectors.toList());
+  		
+ 	}
 	
 	public ResponseEntity<PropriedadeEstruturaisDTO> savePro (PropriedadeEstruturaisDTO proEstruturaisDto) {
 		PropriedadeEstruturais tele = bodysave(mapper.map(proEstruturaisDto, PropriedadeEstruturais.class));

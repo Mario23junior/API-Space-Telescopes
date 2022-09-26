@@ -32,9 +32,9 @@ public class TelescopeSpaceController {
 
 	@GetMapping
 	public List<TelescopeSpaceDTO> listAllTelescope() {
-		return service.listAllTelescope();
+		return service.listAllDate();
 	}
-	
+
 	@GetMapping("{id}")
 	public ResponseEntity<TelescopeSpaceDTO> listId(@PathVariable Long id) {
 		return service.listId(id);

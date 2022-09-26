@@ -1,5 +1,7 @@
 package com.api.telecopeEspace.controller;
 
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +25,11 @@ public class EstruturaOrbitalController {
 		this.service = service;
 	}
 
+	@GetMapping
+	public List<EspecificacaoOrbitalDTO> listAllDate() {
+		return service.listAllDate();
+	}
+	
 	@PostMapping
 	public ResponseEntity<EspecificacaoOrbitalDTO> saveTelescop(@RequestBody EspecificacaoOrbitalDTO proDto) {
 		return service.savePro(proDto);

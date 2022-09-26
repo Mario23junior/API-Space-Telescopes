@@ -24,7 +24,7 @@ public class TelescopeSpaceService {
 		this.mapper = mapper;
 	}
 	
-	public List<TelescopeSpaceDTO> listAllTelescope(){
+	public List<TelescopeSpaceDTO> listAllDate(){
 		List<TelescopeSpace> list = teleRespository.findAll();
  		return list
 				.stream()
