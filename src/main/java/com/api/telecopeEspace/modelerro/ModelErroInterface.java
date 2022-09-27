@@ -6,38 +6,34 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class ModelErroInterface {
 
-	private Integer status;
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yy/MM/yyyy")
-	private Date timestap;
+	private int status;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
+	private Date timestamp;
 	private String message;
 	private String path;
 
-	public ModelErroInterface() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public ModelErroInterface(Integer status, Date timestap, String message, String path) {
+	public ModelErroInterface(int status, Date timestamp, String message, String path) {
 		super();
 		this.status = status;
-		this.timestap = timestap;
+		this.timestamp = timestamp;
 		this.message = message;
 		this.path = path;
 	}
 
-	public Integer getStatus() {
+	public int getStatus() {
 		return status;
 	}
 
-	public void setStatus(Integer status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 
-	public Date getTimestap() {
-		return timestap;
+	public Date getTimestamp() {
+		return timestamp;
 	}
 
-	public void setTimestap(Date timestap) {
-		this.timestap = timestap;
+	public void setTimestamp(Date timestamp) {
+		this.timestamp = timestamp;
 	}
 
 	public String getMessage() {
