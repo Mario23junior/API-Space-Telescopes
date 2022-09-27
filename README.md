@@ -1,4 +1,4 @@
-<p align="center"><img src="img/logo-api.gif" width = "723px" height="333px"></p>
+<p align="center"><img src="doc/logo-doc.gif" width = "723px" height="333px"></p>
 
 <h1 align="center">API Space Telescopes</h1>
 
