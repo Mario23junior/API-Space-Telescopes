@@ -62,12 +62,10 @@ public class EstruturaObservacionaisService {
 		Optional<EstruturaObservacionais> datafind = repository.findById(id);
 		if(datafind.isPresent()) {
 			EstruturaObservacionais e1 = datafind.get();
-		
  			e1.setMassaDeLacamento(propriEstruDto.getMassaDeLacamento());
  			e1.setPotenciaEletrica(propriEstruDto.getPotenciaEletrica());
  			e1.setGeracaoDeEnergia(propriEstruDto.getGeracaoDeEnergia());
  			e1.setComprimentoDeOndas(propriEstruDto.getGeracaoDeEnergia());
-		 
 			return ResponseEntity.ok(mapper.map(e1, EstruturaObservacionaisDTO.class));
 		} else {
 			throw new ExceptionReturnMessageObjectFailed("Erro ao atualiza, o id "+id+" não encontrado");
