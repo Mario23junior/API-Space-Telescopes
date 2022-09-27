@@ -6,7 +6,8 @@
 API de consulta  de telescópios  espaciais, e micções realizadas com o objetivo de exploração espacial
  <p align="center">
  
-<a href="https://www.travis-ci.com/github/Mario23junior/Api-Nebulosas/pull_requests" target="_blank"><img src="https://www.travis-ci.com/Mario23junior/Api-Nebulosas.svg?branch=main">
+![Java CI Maven](https://github.com/Mario23junior/API-Space-Telescopes/actions/workflows/Maven.yml/badge.svg)
+
 <a href="https://en.wikipedia.org/wiki/Representational_state_transfer"><img src="https://img.shields.io/badge/interface-REST-brightgreen.svg?longCache=true&style=flat-square" target="_blank"></a>
 </p>
 
