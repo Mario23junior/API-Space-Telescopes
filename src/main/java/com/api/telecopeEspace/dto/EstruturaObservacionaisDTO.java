@@ -1,5 +1,7 @@
 package com.api.telecopeEspace.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class EstruturaObservacionaisDTO {
     
 	private Long id;
@@ -55,6 +57,7 @@ public class EstruturaObservacionaisDTO {
 		this.comprimentoDeOndas = comprimentoDeOndas;
 	}
 
+	@JsonIgnore
 	public TelescopeSpaceDTO getTelescopeSpaceDto() {
 		return telescopeSpaceDto;
 	}

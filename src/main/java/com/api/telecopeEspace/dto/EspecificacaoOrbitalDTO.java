@@ -1,5 +1,7 @@
 package com.api.telecopeEspace.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class EspecificacaoOrbitalDTO {
 
 	private Long id;
@@ -63,6 +65,7 @@ public class EspecificacaoOrbitalDTO {
 		this.inclinacaoOrbital = inclinacaoOrbital;
 	}
 
+	@JsonIgnore
 	public TelescopeSpaceDTO getTelescopeSpaceDto() {
 		return telescopeSpaceDto;
 	}

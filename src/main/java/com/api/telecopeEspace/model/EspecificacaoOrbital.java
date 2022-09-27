@@ -65,6 +65,7 @@ public class EspecificacaoOrbital {
 		this.periodoOrbital = periodoOrbital;
 	}
 
+	
 	public Double getInclinacaoOrbital() {
 		return inclinacaoOrbital;
 	}

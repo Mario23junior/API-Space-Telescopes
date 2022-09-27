@@ -102,6 +102,7 @@ public class TelescopeSpace {
 		this.status = status;
 	}
 
+	 
 	public List<EspecificacaoOrbital> getEspecificacaoOrbital() {
 		return especificacaoOrbital;
 	}
@@ -110,6 +111,7 @@ public class TelescopeSpace {
 		this.especificacaoOrbital = especificacaoOrbital;
 	}
 
+	 
 	public List<EstruturaObservacionais> getEstruturaObservacionais() {
 		return estruturaObservacionais;
 	}
@@ -118,6 +120,7 @@ public class TelescopeSpace {
 		this.estruturaObservacionais = estruturaObservacionais;
 	}
 
+	 
 	public List<PropriedadeEstruturais> getPropriedadeEstruturais() {
 		return propriedadeEstruturais;
 	}

@@ -64,6 +64,7 @@ public class EstruturaObservacionais {
 		this.comprimentoDeOndas = comprimentoDeOndas;
 	}
 
+	 
 	public TelescopeSpace getTelescopeSpace() {
 		return telescopeSpace;
 	}

@@ -2,6 +2,8 @@ package com.api.telecopeEspace.dto;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class TelescopeSpaceDTO {
 
 	private Long id;
@@ -85,6 +87,7 @@ public class TelescopeSpaceDTO {
 		this.status = status;
 	}
 
+	@JsonIgnore
 	public List<EspecificacaoOrbitalDTO> getEspecificacaoOrbitalDto() {
 		return especificacaoOrbitalDto;
 	}
@@ -93,6 +96,7 @@ public class TelescopeSpaceDTO {
 		this.especificacaoOrbitalDto = especificacaoOrbitalDto;
 	}
 
+	@JsonIgnore
 	public List<EstruturaObservacionaisDTO> getEstruturaObservacionaisDto() {
 		return estruturaObservacionaisDto;
 	}
@@ -101,6 +105,7 @@ public class TelescopeSpaceDTO {
 		this.estruturaObservacionaisDto = estruturaObservacionaisDto;
 	}
 
+	@JsonIgnore
 	public List<PropriedadeEstruturaisDTO> getPropriedadeEstruturaisDto() {
 		return propriedadeEstruturaisDto;
 	}

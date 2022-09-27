@@ -73,6 +73,7 @@ public class PropriedadeEstruturais {
 		this.distanciaFocal = distanciaFocal;
 	}
 
+	 
 	public TelescopeSpace getTelescopeSpace() {
 		return telescopeSpace;
 	}
