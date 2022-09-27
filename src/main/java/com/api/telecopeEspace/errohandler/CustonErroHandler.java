@@ -14,7 +14,7 @@ import com.api.telecopeEspace.modelerro.ModelErroInterface;
 public class CustonErroHandler {
    
 	@ExceptionHandler(ExceptionReturnMessageObjectFailed.class)
-	public ModelErroInterface CustonErroHandlerReturn(ExceptionReturnMessageObjectFailed ex, WebRequest request) {
+ 	public ModelErroInterface CustonErroHandlerReturn(ExceptionReturnMessageObjectFailed ex, WebRequest request) {
 		ModelErroInterface error = new ModelErroInterface(
 				HttpStatus.NO_CONTENT.value(),
 				new Date(),
