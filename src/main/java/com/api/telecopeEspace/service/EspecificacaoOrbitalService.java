@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.api.telecopeEspace.dto.EspecificacaoOrbitalDTO;
+import com.api.telecopeEspace.exception.ExceptionReturnMessageObjectFailed;
 import com.api.telecopeEspace.model.EspecificacaoOrbital;
 import com.api.telecopeEspace.repository.EspecificacaoOrbitalRepository;
 
@@ -26,10 +27,14 @@ public class EspecificacaoOrbitalService {
 	
 	public List<EspecificacaoOrbitalDTO> listAllDate(){
 		List<EspecificacaoOrbital> list = repository.findAll();
- 		return list
-				.stream()
-				.map(listall -> mapper.map(listall, EspecificacaoOrbitalDTO.class))
-				.collect(Collectors.toList());
+		try {			
+			return list
+					.stream()
+					.map(listall -> mapper.map(listall, EspecificacaoOrbitalDTO.class))
+					.collect(Collectors.toList());
+		}catch(ExceptionReturnMessageObjectFailed ex) {
+			throw new ExceptionReturnMessageObjectFailed("Erro ao buscar obter aglomerado de dados");
+		}
   		
  	}
 	
@@ -47,11 +52,15 @@ public class EspecificacaoOrbitalService {
 	
 	public ResponseEntity<EspecificacaoOrbitalDTO> listId(Long id){
 		Optional<EspecificacaoOrbital> listid = repository.findById(id);
-		 if(listid.isPresent()) {
-			 return ResponseEntity.ok(mapper.map(listid.get(), EspecificacaoOrbitalDTO.class));
-		 } else {
-			 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-		 }
+		try {			
+			if(listid.isPresent()) {
+				return ResponseEntity.ok(mapper.map(listid.get(), EspecificacaoOrbitalDTO.class));
+			} else {
+				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			}
+		}catch(ExceptionReturnMessageObjectFailed ex) {
+			throw new ExceptionReturnMessageObjectFailed("Erro ao buscar numero de idenficação "+ id);
+		}
 	}
 	
 	public ResponseEntity<EspecificacaoOrbitalDTO> updatePropri (Long id, EspecificacaoOrbitalDTO proprieOrbiDto){
@@ -67,7 +76,7 @@ public class EspecificacaoOrbitalService {
 		 
 			return ResponseEntity.ok(mapper.map(p1, EspecificacaoOrbitalDTO.class));
 		} else {
-			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			throw new ExceptionReturnMessageObjectFailed("Erro ao atualizar dados ");
 		}
 	}
 	
@@ -77,7 +86,7 @@ public class EspecificacaoOrbitalService {
 			 repository.delete(listid.get());
 			 return ResponseEntity.ok(mapper.map(listid.get(), EspecificacaoOrbitalDTO.class));
 		 } else {
-			 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+				throw new ExceptionReturnMessageObjectFailed("Erro ao deletar id de identificação "+ id);
 		 }
 	}
 

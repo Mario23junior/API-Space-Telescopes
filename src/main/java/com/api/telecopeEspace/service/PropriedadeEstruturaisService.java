@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.api.telecopeEspace.dto.PropriedadeEstruturaisDTO;
+import com.api.telecopeEspace.exception.ExceptionReturnMessageObjectFailed;
 import com.api.telecopeEspace.model.PropriedadeEstruturais;
 import com.api.telecopeEspace.repository.PropriedadeEstruturaisRepository;
 
@@ -49,7 +50,7 @@ public class PropriedadeEstruturaisService {
 		 if(listid.isPresent()) {
 			 return ResponseEntity.ok(mapper.map(listid.get(), PropriedadeEstruturaisDTO.class));
 		 } else {
-			 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			throw new ExceptionReturnMessageObjectFailed("Erro ao encontrar dados por favor tente novamente mais tarde");
 		 }
 	}
 	
@@ -66,7 +67,7 @@ public class PropriedadeEstruturaisService {
 
 			return ResponseEntity.ok(mapper.map(p1, PropriedadeEstruturaisDTO.class));
 		} else {
-			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			throw new ExceptionReturnMessageObjectFailed("Erro ao deletar dados por favor tente novamente mais tarde");
 		}
 	}
 	
@@ -76,7 +77,7 @@ public class PropriedadeEstruturaisService {
 			 propriEstrReposi.delete(listid.get());
 			 return ResponseEntity.ok(mapper.map(listid.get(), PropriedadeEstruturaisDTO.class));
 		 } else {
-			 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+				throw new ExceptionReturnMessageObjectFailed("Erro ao deletar dados por favor tente novamente mais tarde");
 		 }
 	}
 

@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.api.telecopeEspace.dto.TelescopeSpaceDTO;
+import com.api.telecopeEspace.exception.ExceptionReturnMessageObjectFailed;
 import com.api.telecopeEspace.model.TelescopeSpace;
 import com.api.telecopeEspace.repository.TelescopeSpaceRepository;
 
@@ -49,7 +50,7 @@ public class TelescopeSpaceService {
 		 if(listid.isPresent()) {
 			 return ResponseEntity.ok(mapper.map(listid.get(), TelescopeSpaceDTO.class));
 		 } else {
-			 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+				throw new ExceptionReturnMessageObjectFailed("Erro ao encontrar dados por favor tente novamente mais tarde");
 		 }
 	}
 	
@@ -67,7 +68,7 @@ public class TelescopeSpaceService {
 			
 			return ResponseEntity.ok(mapper.map(t1, TelescopeSpaceDTO.class));
 		} else {
-			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			throw new ExceptionReturnMessageObjectFailed("Erro ao encontrar dados por favor tente novamente mais tarde");
 		}
 	}
 	
@@ -77,7 +78,7 @@ public class TelescopeSpaceService {
 			 teleRespository.delete(listid.get());
 			 return ResponseEntity.ok(mapper.map(listid.get(), TelescopeSpaceDTO.class));
 		 } else {
-			 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+				throw new ExceptionReturnMessageObjectFailed("Erro ao deletar dados por favor tente novamente mais tarde");
 		 }
 	}
 	

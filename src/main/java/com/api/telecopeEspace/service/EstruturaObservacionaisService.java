@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.api.telecopeEspace.dto.EstruturaObservacionaisDTO;
+import com.api.telecopeEspace.exception.ExceptionReturnMessageObjectFailed;
 import com.api.telecopeEspace.model.EstruturaObservacionais;
 import com.api.telecopeEspace.repository.EstruturaObservacionaisRepository;
 
@@ -25,12 +26,16 @@ public class EstruturaObservacionaisService {
 	}
 	
 	public List<EstruturaObservacionaisDTO> listAllDate(){
+		try {
 		List<EstruturaObservacionais> list = repository.findAll();
- 		return list
-				.stream()
-				.map(listall -> mapper.map(listall, EstruturaObservacionaisDTO.class))
-				.collect(Collectors.toList());
-  		
+			return list
+					.stream()
+					.map(listall -> mapper.map(listall, EstruturaObservacionaisDTO.class))
+					.collect(Collectors.toList());
+		} catch(ExceptionReturnMessageObjectFailed ex) {
+			throw new ExceptionReturnMessageObjectFailed("Erro ao encontrar dados por favor tente novamente mais tarde");
+		}
+ 		
  	}
 	
 	public ResponseEntity<EstruturaObservacionaisDTO> savestruturaObser (EstruturaObservacionaisDTO proEsturaObserDto) {
@@ -49,7 +54,7 @@ public class EstruturaObservacionaisService {
 		 if(listid.isPresent()) {
 			 return ResponseEntity.ok(mapper.map(listid.get(), EstruturaObservacionaisDTO.class));
 		 } else {
-			 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+				throw new ExceptionReturnMessageObjectFailed("Id "+id+" não encontrado");
 		 }
 	}
 	
@@ -65,7 +70,7 @@ public class EstruturaObservacionaisService {
 		 
 			return ResponseEntity.ok(mapper.map(e1, EstruturaObservacionaisDTO.class));
 		} else {
-			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			throw new ExceptionReturnMessageObjectFailed("Erro ao atualiza, o id "+id+" não encontrado");
 		}
 	}
 	
@@ -75,7 +80,7 @@ public class EstruturaObservacionaisService {
 			 repository.delete(listid.get());
 			 return ResponseEntity.ok(mapper.map(listid.get(), EstruturaObservacionaisDTO.class));
 		 } else {
-			 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+				throw new ExceptionReturnMessageObjectFailed("Erro ao deletar o id "+ id);
 		 }
 	}
 	
