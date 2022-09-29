@@ -69,10 +69,10 @@ public class CargaDateBase {
 		t1.setEspecificacaoOrbitalDto(Arrays.asList(e1));
 
 		TelescopeSpaceDTO ts2 = new TelescopeSpaceDTO();
-		ts2.setId(2l);
+		ts2.setId(5l);
 
 		EstruturaObservacionaisDTO eo2 = new EstruturaObservacionaisDTO();
-		eo2.setId(2l);
+		eo2.setId(5l);
 		eo2.setMassaDeLacamento("950.00");
 		eo2.setPotenciaEletrica(0.0);
 		eo2.setGeracaoDeEnergia("Painéis solares fotovoltaicos");
@@ -80,7 +80,7 @@ public class CargaDateBase {
 		eo2.setTelescopeSpaceDto(ts2);
 
 		PropriedadeEstruturaisDTO p2 = new PropriedadeEstruturaisDTO();
-		p2.setId(2l);
+		p2.setId(5l);
 		p2.setComprimento(85.0);
 		p2.setApoastro(828.0);
 		p2.setDiametro(85.0);
@@ -89,7 +89,7 @@ public class CargaDateBase {
 		p2.setTelescopeSpaceDto(ts2);
 
 		EspecificacaoOrbitalDTO e2 = new EspecificacaoOrbitalDTO();
-		e2.setId(2l);
+		e2.setId(5l);
 		e2.setDecaimento("");
 		e2.setExcentricidadeOrbital(0.02);
 		e2.setReferenciaOrbital("Terra, órbita heliocêntrica");
@@ -98,7 +98,7 @@ public class CargaDateBase {
 		e2.setTelescopeSpaceDto(ts2);
 
 		TelescopeSpaceDTO t2 = new TelescopeSpaceDTO();
-		t2.setId(2l);
+		t2.setId(5l);
 		t2.setNome("Spitzer");
 		t2.setImg("https://raumfahrtmissionen.dlr.de/images/Missionsbilder/S/Spitzer_SIRTF_ir_rh_4.jpg");
 		t2.setTipo("Telescopio");
@@ -110,12 +110,12 @@ public class CargaDateBase {
 		t2.setEstruturaObservacionaisDto(Arrays.asList(eo2));
 		t2.setPropriedadeEstruturaisDto(Arrays.asList(p2));
 		t2.setEspecificacaoOrbitalDto(Arrays.asList(e2));
-
+		
 		TelescopeSpaceDTO ts3 = new TelescopeSpaceDTO();
-		ts3.setId(3l);
+		ts3.setId(9l);
 
 		EstruturaObservacionaisDTO eo3 = new EstruturaObservacionaisDTO();
-		eo3.setId(3l);
+		eo3.setId(9l);
 		eo3.setMassaDeLacamento("53");
 		eo3.setPotenciaEletrica(35.00);
 		eo3.setGeracaoDeEnergia("Painéis solares fotovoltaicos");
@@ -123,7 +123,7 @@ public class CargaDateBase {
 		eo3.setTelescopeSpaceDto(ts3);
 
 		PropriedadeEstruturaisDTO p3 = new PropriedadeEstruturaisDTO();
-		p3.setId(3l);
+		p3.setId(9l);
 		p3.setComprimento(0.0);
 		p3.setApoastro(129.3968);
 		p3.setDiametro(15);
@@ -132,7 +132,7 @@ public class CargaDateBase {
 		p3.setTelescopeSpaceDto(ts3);
 
 		EspecificacaoOrbitalDTO e3 = new EspecificacaoOrbitalDTO();
-		e3.setId(3l);
+		e3.setId(9l);
 		e3.setDecaimento("000");
 		e3.setExcentricidadeOrbital(0.0010821);
 		e3.setReferenciaOrbital("Geocêntrico");
@@ -141,7 +141,7 @@ public class CargaDateBase {
 		e3.setTelescopeSpaceDto(ts3);
 
 		TelescopeSpaceDTO t3 = new TelescopeSpaceDTO();
-		t3.setId(3l);
+		t3.setId(9l);
 		t3.setNome("MOST");
 		t3.setImg("https://space.skyrocket.de/img_sat/most__1.jpg");
 		t3.setTipo("Telescopio");
@@ -153,12 +153,12 @@ public class CargaDateBase {
 		t3.setEstruturaObservacionaisDto(Arrays.asList(eo3));
 		t3.setPropriedadeEstruturaisDto(Arrays.asList(p3));
 		t3.setEspecificacaoOrbitalDto(Arrays.asList(e3));
-
+		
 		TelescopeSpaceDTO ts4 = new TelescopeSpaceDTO();
-		ts4.setId(4l);
+		ts4.setId(13l);
 
 		EstruturaObservacionaisDTO eo4 = new EstruturaObservacionaisDTO();
-		eo4.setId(4l);
+		eo4.setId(13l);
 		eo4.setMassaDeLacamento("4.790");
 		eo4.setPotenciaEletrica(2.350);
 		eo4.setGeracaoDeEnergia("");
@@ -166,7 +166,7 @@ public class CargaDateBase {
 		eo4.setTelescopeSpaceDto(ts4);
 
 		PropriedadeEstruturaisDTO p4 = new PropriedadeEstruturaisDTO();
-		p4.setId(4l);
+		p4.setId(13l);
 		p4.setComprimento(0.0);
 		p4.setApoastro(134.5276);
 		p4.setDiametro(0.0);
@@ -175,7 +175,7 @@ public class CargaDateBase {
 		p4.setTelescopeSpaceDto(ts4);
 
 		EspecificacaoOrbitalDTO e4 = new EspecificacaoOrbitalDTO();
-		e4.setId(4l);
+		e4.setId(13l);
 		e4.setDecaimento("");
 		e4.setExcentricidadeOrbital(0.743972);
 		e4.setReferenciaOrbital("Geocêntrica , Órbita elíptica alta");
@@ -184,7 +184,7 @@ public class CargaDateBase {
 		e4.setTelescopeSpaceDto(ts4);
 
 		TelescopeSpaceDTO t4 = new TelescopeSpaceDTO();
-		t4.setId(3l);
+		t4.setId(13l);
 		t4.setNome("raios-X Chandra");
 		t4.setImg(
 				"https://i0.wp.com/gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2018/10/chandra-nasa.jpg?fit=1260%2C708&ssl=1");
@@ -197,12 +197,12 @@ public class CargaDateBase {
 		t4.setEstruturaObservacionaisDto(Arrays.asList(eo4));
 		t4.setPropriedadeEstruturaisDto(Arrays.asList(p4));
 		t4.setEspecificacaoOrbitalDto(Arrays.asList(e4));
-
+		
 		TelescopeSpaceDTO ts5 = new TelescopeSpaceDTO();
-		ts5.setId(5l);
+		ts5.setId(17l);
 
 		EstruturaObservacionaisDTO eo5 = new EstruturaObservacionaisDTO();
-		eo5.setId(5l);
+		eo5.setId(17l);
 		eo5.setMassaDeLacamento("6.1614");
 		eo5.setPotenciaEletrica(2.000);
 		eo5.setGeracaoDeEnergia("");
@@ -210,7 +210,7 @@ public class CargaDateBase {
 		eo5.setTelescopeSpaceDto(ts5);
 
 		PropriedadeEstruturaisDTO p5 = new PropriedadeEstruturaisDTO();
-		p5.setId(5l);
+		p5.setId(17l);
 		p5.setComprimento(0.0);
 		p5.setApoastro(1.500000);
 		p5.setDiametro(6.5);
@@ -219,7 +219,7 @@ public class CargaDateBase {
 		p5.setTelescopeSpaceDto(ts5);
 
 		EspecificacaoOrbitalDTO e5 = new EspecificacaoOrbitalDTO();
-		e5.setId(5l);
+		e5.setId(17l);
 		e5.setDecaimento("");
 		e5.setExcentricidadeOrbital(0.0);
 		e5.setReferenciaOrbital("1.500.000");
@@ -228,7 +228,7 @@ public class CargaDateBase {
 		e5.setTelescopeSpaceDto(ts5);
 
 		TelescopeSpaceDTO t5 = new TelescopeSpaceDTO();
-		t5.setId(5l);
+		t5.setId(17l);
 		t5.setNome("James Webb");
 		t5.setImg("https://upload.wikimedia.org/wikipedia/commons/2/2a/JWST_spacecraft_model_3.png");
 		t5.setTipo("Telescopio");
@@ -240,12 +240,12 @@ public class CargaDateBase {
 		t5.setEstruturaObservacionaisDto(Arrays.asList(eo5));
 		t5.setPropriedadeEstruturaisDto(Arrays.asList(p5));
 		t5.setEspecificacaoOrbitalDto(Arrays.asList(e5));
-
+		
 		TelescopeSpaceDTO ts6 = new TelescopeSpaceDTO();
-		ts6.setId(6l);
+		ts6.setId(21l);
 
 		EstruturaObservacionaisDTO eo6 = new EstruturaObservacionaisDTO();
-		eo6.setId(6l);
+		eo6.setId(21l);
 		eo6.setMassaDeLacamento("1.0524");
 		eo6.setPotenciaEletrica(1.100);
 		eo6.setGeracaoDeEnergia("Painéis solares fotovoltaicos");
@@ -253,7 +253,7 @@ public class CargaDateBase {
 		eo6.setTelescopeSpaceDto(ts6);
 
 		PropriedadeEstruturaisDTO p6 = new PropriedadeEstruturaisDTO();
-		p6.setId(6l);
+		p6.setId(21l);
 		p6.setComprimento(430);
 		p6.setApoastro(1.0499);
 		p6.setDiametro(2.7);
@@ -262,7 +262,7 @@ public class CargaDateBase {
 		p6.setTelescopeSpaceDto(ts6);
 
 		EspecificacaoOrbitalDTO e6 = new EspecificacaoOrbitalDTO();
-		e6.setId(6l);
+		e6.setId(21l);
 		e6.setDecaimento("");
 		e6.setExcentricidadeOrbital(0.036116);
 		e6.setReferenciaOrbital("Heliocêntrica");
@@ -271,7 +271,7 @@ public class CargaDateBase {
 		e6.setTelescopeSpaceDto(ts6);
 
 		TelescopeSpaceDTO t6 = new TelescopeSpaceDTO();
-		t6.setId(6l);
+		t6.setId(21l);
 		t6.setNome("Kepler");
 		t6.setImg(
 				"https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Kepler_Space_Telescope_spacecraft_model_2.png/800px-Kepler_Space_Telescope_spacecraft_model_2.png");
@@ -284,12 +284,12 @@ public class CargaDateBase {
 		t6.setEstruturaObservacionaisDto(Arrays.asList(eo6));
 		t6.setPropriedadeEstruturaisDto(Arrays.asList(p6));
 		t6.setEspecificacaoOrbitalDto(Arrays.asList(e6));
-
+		
 		TelescopeSpaceDTO ts7 = new TelescopeSpaceDTO();
-		ts7.setId(7l);
+		ts7.setId(25l);
 
 		EstruturaObservacionaisDTO eo7 = new EstruturaObservacionaisDTO();
-		eo7.setId(7l);
+		eo7.setId(25l);
 		eo7.setMassaDeLacamento("480");
 		eo7.setPotenciaEletrica(0.0);
 		eo7.setGeracaoDeEnergia("Painéis solares fotovoltaicos");
@@ -297,7 +297,7 @@ public class CargaDateBase {
 		eo7.setTelescopeSpaceDto(ts7);
 
 		PropriedadeEstruturaisDTO p7 = new PropriedadeEstruturaisDTO();
-		p7.setId(7l);
+		p7.setId(25l);
 		p7.setComprimento(0.0);
 		p7.setApoastro(594.0);
 		p7.setDiametro(0.0);
@@ -306,7 +306,7 @@ public class CargaDateBase {
 		p7.setTelescopeSpaceDto(ts7);
 
 		EspecificacaoOrbitalDTO e7 = new EspecificacaoOrbitalDTO();
-		e7.setId(7l);
+		e7.setId(25l);
 		e7.setDecaimento("29/03/2003");
 		e7.setExcentricidadeOrbital(0.00136);
 		e7.setReferenciaOrbital("Geocêntrica");
@@ -315,7 +315,7 @@ public class CargaDateBase {
 		e7.setTelescopeSpaceDto(ts7);
 
 		TelescopeSpaceDTO t7 = new TelescopeSpaceDTO();
-		t7.setId(7l);
+		t7.setId(25l);
 		t7.setNome("BeppoSAX");
 		t7.setImg("https://heasarc.gsfc.nasa.gov/Images/sax/sax.jpg");
 		t7.setTipo("Telescopio");
@@ -327,12 +327,22 @@ public class CargaDateBase {
 		t7.setEstruturaObservacionaisDto(Arrays.asList(eo7));
 		t7.setPropriedadeEstruturaisDto(Arrays.asList(p7));
 		t7.setEspecificacaoOrbitalDto(Arrays.asList(e7));
+		
+
+
+		
+
+		
+
+		
+
+		
 
 		TelescopeSpaceDTO ts8 = new TelescopeSpaceDTO();
-		ts8.setId(8l);
+		ts8.setId(29l);
 
 		EstruturaObservacionaisDTO eo8 = new EstruturaObservacionaisDTO();
-		eo8.setId(8l);
+		eo8.setId(29l);
 		eo8.setMassaDeLacamento("613");
 		eo8.setPotenciaEletrica(2.132);
 		eo8.setGeracaoDeEnergia("Painéis solares fotovoltaicos");
@@ -340,7 +350,7 @@ public class CargaDateBase {
 		eo8.setTelescopeSpaceDto(ts8);
 
 		PropriedadeEstruturaisDTO p8 = new PropriedadeEstruturaisDTO();
-		p8.setId(8l);
+		p8.setId(29l);
 		p8.setComprimento(0.0);
 		p8.setApoastro(562.5);
 		p8.setDiametro(0.0);
@@ -349,7 +359,7 @@ public class CargaDateBase {
 		p8.setTelescopeSpaceDto(ts8);
 
 		EspecificacaoOrbitalDTO e8 = new EspecificacaoOrbitalDTO();
-		e8.setId(8l);
+		e8.setId(29l);
 		e8.setDecaimento("");
 		e8.setExcentricidadeOrbital(15.04);
 		e8.setReferenciaOrbital("Geocêntrica");
@@ -358,7 +368,7 @@ public class CargaDateBase {
 		e8.setTelescopeSpaceDto(ts8);
 
 		TelescopeSpaceDTO t8 = new TelescopeSpaceDTO();
-		t8.setId(8l);
+		t8.setId(29l);
 		t8.setNome("Neil Gehrels Swift Observatory");
 		t8.setImg(
 				"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Swift_Observatory_spacecraft_model.png/800px-Swift_Observatory_spacecraft_model.png");
@@ -372,17 +382,17 @@ public class CargaDateBase {
 		t8.setPropriedadeEstruturaisDto(Arrays.asList(p8));
 		t8.setEspecificacaoOrbitalDto(Arrays.asList(e8));
 
-		TelescopeSpaceDTO tsdto = mapper.map(t1, TelescopeSpaceDTO.class);
-		TelescopeSpaceDTO tsdto2 = mapper.map(ts2, TelescopeSpaceDTO.class);
-		TelescopeSpaceDTO tsdto3 = mapper.map(ts3, TelescopeSpaceDTO.class);
-		TelescopeSpaceDTO tsdto4 = mapper.map(ts4, TelescopeSpaceDTO.class);
-		TelescopeSpaceDTO tsdto5 = mapper.map(ts5, TelescopeSpaceDTO.class);
-		TelescopeSpaceDTO tsdto6 = mapper.map(ts6, TelescopeSpaceDTO.class);
-		TelescopeSpaceDTO tsdto7 = mapper.map(ts7, TelescopeSpaceDTO.class);
-		TelescopeSpaceDTO tsdto8 = mapper.map(ts8, TelescopeSpaceDTO.class);
 
+ 		TelescopeSpaceDTO tsdto = mapper.map(t1, TelescopeSpaceDTO.class);
+		TelescopeSpaceDTO tsdto2 = mapper.map(t2, TelescopeSpaceDTO.class);
+		TelescopeSpaceDTO tsdto3 = mapper.map(t3, TelescopeSpaceDTO.class);
+		TelescopeSpaceDTO tsdto4 = mapper.map(t4, TelescopeSpaceDTO.class);
+		TelescopeSpaceDTO tsdto5 = mapper.map(t5, TelescopeSpaceDTO.class);
+		TelescopeSpaceDTO tsdto6 = mapper.map(t6, TelescopeSpaceDTO.class);
+		TelescopeSpaceDTO tsdto7 = mapper.map(t7, TelescopeSpaceDTO.class);
+		TelescopeSpaceDTO tsdto8 = mapper.map(t8, TelescopeSpaceDTO.class);
 
-		repository.saveAll(Arrays.asList(mapper.map(tsdto, TelescopeSpace.class)));
+ 		repository.saveAll(Arrays.asList(mapper.map(tsdto, TelescopeSpace.class)));
 		repository.saveAll(Arrays.asList(mapper.map(tsdto2, TelescopeSpace.class)));
 		repository.saveAll(Arrays.asList(mapper.map(tsdto3, TelescopeSpace.class)));
 		repository.saveAll(Arrays.asList(mapper.map(tsdto4, TelescopeSpace.class)));
