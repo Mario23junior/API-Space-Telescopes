@@ -327,16 +327,7 @@ public class CargaDateBase {
 		t7.setEstruturaObservacionaisDto(Arrays.asList(eo7));
 		t7.setPropriedadeEstruturaisDto(Arrays.asList(p7));
 		t7.setEspecificacaoOrbitalDto(Arrays.asList(e7));
-		
-
-
-		
-
-		
-
-		
-
-		
+ 
 
 		TelescopeSpaceDTO ts8 = new TelescopeSpaceDTO();
 		ts8.setId(29l);
@@ -381,7 +372,6 @@ public class CargaDateBase {
 		t8.setEstruturaObservacionaisDto(Arrays.asList(eo8));
 		t8.setPropriedadeEstruturaisDto(Arrays.asList(p8));
 		t8.setEspecificacaoOrbitalDto(Arrays.asList(e8));
-
 
  		TelescopeSpaceDTO tsdto = mapper.map(t1, TelescopeSpaceDTO.class);
 		TelescopeSpaceDTO tsdto2 = mapper.map(t2, TelescopeSpaceDTO.class);
