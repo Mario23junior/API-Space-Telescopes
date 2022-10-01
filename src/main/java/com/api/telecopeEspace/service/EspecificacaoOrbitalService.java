@@ -32,6 +32,7 @@ public class EspecificacaoOrbitalService {
 					.stream()
 					.map(listall -> mapper.map(listall, EspecificacaoOrbitalDTO.class))
 					.collect(Collectors.toList());
+			
 		}catch(ExceptionReturnMessageObjectFailed ex) {
 			throw new ExceptionReturnMessageObjectFailed("Erro ao buscar obter aglomerado de dados");
 		}
