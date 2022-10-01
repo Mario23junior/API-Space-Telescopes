@@ -143,7 +143,7 @@ public class CargaDateBase {
 		TelescopeSpaceDTO t3 = new TelescopeSpaceDTO();
 		t3.setId(9l);
 		t3.setNome("MOST");
-		t3.setImg("https://space.skyrocket.de/img_sat/most__1.jpg");
+		t3.setImg("https://astro-canada.ca/uploads/a2118-most3-g.jpg");
 		t3.setTipo("Telescopio");
 		t3.setMissao(
 				"O telescópio espacial MOST foi desenvolvido pelo Canadá para estudar microvariabilidade e as oscilações das estrelas.");
@@ -274,7 +274,7 @@ public class CargaDateBase {
 		t6.setId(21l);
 		t6.setNome("Kepler");
 		t6.setImg(
-				"https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Kepler_Space_Telescope_spacecraft_model_2.png/800px-Kepler_Space_Telescope_spacecraft_model_2.png");
+				"https://astronomynow.com/wp-content/uploads/2016/04/Kepler_K2_640x480.jpg");
 		t6.setTipo("Schmidt");
 		t6.setMissao(
 				"O Telescópio Espacial Kepler consistiu em um observatório espacial projetado pela NASA que procurou por planetas com características habitáveis fora do Sistema Solar por nove anos e meio.");
