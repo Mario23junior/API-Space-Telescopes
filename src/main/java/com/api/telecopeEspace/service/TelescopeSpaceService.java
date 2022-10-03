@@ -76,7 +76,7 @@ public class TelescopeSpaceService {
 		Optional<TelescopeSpace> listid = teleRespository.findById(id);
 		 if(listid.isPresent()) {
 			 teleRespository.delete(listid.get());
-			 return ResponseEntity.ok(mapper.map(listid.get(), TelescopeSpaceDTO.class));
+			 return ResponseEntity.ok(mapper.map(listid, TelescopeSpaceDTO.class));
 		 } else {
 				throw new ExceptionReturnMessageObjectFailed("Erro ao deletar dados por favor tente novamente mais tarde");
 		 }

@@ -192,7 +192,7 @@ public class CargaDateBase {
 		t4.setMissao(
 				"O Observatório de raios-X Chandra é um telescópio espacial lançado pela NASA e gerenciado pelo Laboratório de Jato-Propulsão. Foi lançado em 23 de julho de 1999, pela missão STS-93 do ônibus espacial Columbia");
 		t4.setDurationMissao("");
-		t4.setDataDelancamento("");
+		t4.setDataDelancamento("23/06/1999");
 		t4.setStatus("ativo");
 		t4.setEstruturaObservacionaisDto(Arrays.asList(eo4));
 		t4.setPropriedadeEstruturaisDto(Arrays.asList(p4));
