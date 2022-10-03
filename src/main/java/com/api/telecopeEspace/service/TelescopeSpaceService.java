@@ -65,7 +65,7 @@ public class TelescopeSpaceService {
 			t1.setDurationMissao(telescopeSpDto.getDataDelancamento());
 			t1.setDataDelancamento(telescopeSpDto.getDataDelancamento());
 			t1.setStatus(telescopeSpDto.getStatus());
-			
+			teleRespository.save(t1);
 			return ResponseEntity.ok(mapper.map(t1, TelescopeSpaceDTO.class));
 		} else {
 			throw new ExceptionReturnMessageObjectFailed("Erro ao encontrar dados por favor tente novamente mais tarde");
