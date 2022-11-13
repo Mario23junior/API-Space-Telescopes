@@ -1,0 +1,568 @@
+{
+	"info": {
+		"_postman_id": "c50f4495-9ed9-46a7-bb92-33824f3c8647",
+		"name": "Telescope Space",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10455541"
+	},
+	"item": [
+		{
+			"name": "telescope space",
+			"item": [
+				{
+					"name": "Salvando dados de telescopio espaciais",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n   \"nome\":\"Hubble\",\n   \"img\":\"https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg\",\n   \"tipo\":\"Satélite\",\n   \"missao\":\"Por intermédio do telescópio espacial Hubble, pretende-se investigar a composição e características físicas de corpos celestes, observar galáxias e estrelas para entender melhor a sua formação e levantar dados para a compreensão da história e evolução do Universo.\",\n   \"durationMissao\":\"32 anos\",\n   \"dataDelancamento\":\"24/04/1990\",\n   \"status\":\"ativo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/telescopespace/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"telescopespace",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listando telescopios por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/telescopespace/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"telescopespace",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletando telescopios",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/telescopespace/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"telescopespace",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizando dados",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Hubble teste\",\n    \"img\": \"https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg\",\n    \"tipo\": \"Satélite\",\n    \"missao\": \"Por intermédio do telescópio espacial Hubble, pretende-se investigar a composição e características físicas de corpos celestes, observar galáxias e estrelas para entender melhor a sua formação e levantar dados para a compreensão da história e evolução do Universo.\",\n    \"durationMissao\": \"32 anos\",\n    \"dataDelancamento\": \"24/04/1990\",\n    \"status\": \"ativo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/telescopespace/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"telescopespace",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listando todos os telescopios cadastrados na base de dados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/telescopespace/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"telescopespace",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Propriedade estruturais",
+			"item": [
+				{
+					"name": "Listando dados de estruturais por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/propriedadesestruturais/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"propriedadesestruturais",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvando dados de propriedades estruturais",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"comprimento\": 13.2,\n    \"diametro\": 4.2,\n    \"periastro\": 537.4,\n    \"apoastro\": 541.4,\n    \"distanciaFocal\": 57.6,\n    \"telescopeSpaceDto\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/propriedadesestruturais/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"propriedadesestruturais",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletando dados estruturais por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/propriedadesestruturais/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"propriedadesestruturais",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizando dados por id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"comprimento\": 13.2,\n    \"diametro\": 4.2,\n    \"periastro\": 537.4,\n    \"apoastro\": 541.4,\n    \"distanciaFocal\": 57.6,\n    \"telescopeSpaceDto\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/propriedadesestruturais/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"propriedadesestruturais",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listando todos os dados de telescopios orbitais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/propriedadesestruturais/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"propriedadesestruturais",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Especificacao orbital",
+			"item": [
+				{
+					"name": "Listando especificação orbitais por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/estruturaOrbital/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"estruturaOrbital",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletando estruturas orbitais",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/estruturaOrbital/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"estruturaOrbital",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizando dados de especificao por id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/estruturaOrbital/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"estruturaOrbital",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvando dados de especificacao orbital",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"decaimento\": \"2030,2040\",\n    \"excentricidadeOrbital\": 2.657E-4,\n    \"referenciaOrbital\": \"Geocêntrica\",\n    \"periodoOrbital\": \"95.47\",\n    \"inclinacaoOrbital\": 28.47,\n    \"telescopeSpaceDto\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/estruturaOrbital/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"estruturaOrbital",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listando todos as especificações orbitais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/estruturaOrbital/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"estruturaOrbital",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estrutura observacionais",
+			"item": [
+				{
+					"name": "Listando dados de estruturas observacionais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/estruturaobservacionais/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"estruturaobservacionais",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvando dados de estruturas observacionais",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/estruturaobservacionais/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"estruturaobservacionais",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletando dados de estruturas observacionais",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/estruturaobservacionais/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"estruturaobservacionais",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizando informações observacionais",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"massaDeLacamento\": \"11.10\",\n    \"potenciaEletrica\": 1.8,\n    \"geracaoDeEnergia\": \"Painéis solares fotovoltaicos\",\n    \"comprimentoDeOndas\": \"Luz visível, raios gama, raios-X, infravermelho\",\n    \"telescopeSpaceDto\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/estruturaobservacionais/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"estruturaobservacionais",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listando os dados observacionais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/estruturaobservacionais/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"estruturaobservacionais",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Listando dados finais",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/api/base/telescope/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"base",
+						"telescope",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
